@@ -1,0 +1,53 @@
+{
+  "name": "henge",
+  "version": "1.0.0",
+  "description": "HENGE Customize Stylesheet Manager",
+  "license": "MIT",
+  "private": true,
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "run-p build:*",
+    "watch": "run-p watch:*",
+    "lint": "run-s lint:*",
+    "watch:ts": "webpack --config webpack.dev.js -w",
+    "watch:sass": "sass src/sass/main.scss dist/main.css -w",
+    "watch:copy": "cpx \"src/static/**\" dist --watch",
+    "build:ts": "webpack --config webpack.prod.js",
+    "build:sass": "sass src/sass/main.scss dist/main.css",
+    "lint:ts": "eslint src",
+    "lint:sass": "stylelint src",
+    "prebuild": "cpx \"src/static/**\" dist -C"
+  },
+  "author": "ken7253 <ken7253@gmail.com> (https://dairoku-studio.com/)",
+  "engineStrict": true,
+  "engines": {
+    "node": "16.13.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.163",
+    "@types/node": "^16.11.6",
+    "@types/react": "^17.0.34",
+    "@types/react-dom": "^17.0.11",
+    "@types/webpack": "^5.28.0",
+    "@typescript-eslint/eslint-plugin": "^5.3.0",
+    "@typescript-eslint/parser": "^5.3.0",
+    "cpx": "^1.5.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.26.1",
+    "npm-check-updates": "^12.0.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.43.4",
+    "stylelint": "^14.0.1",
+    "stylelint-config-standard": "^23.0.0",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.4",
+    "webpack": "^5.62.1",
+    "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

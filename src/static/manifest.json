@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "version": "0.0.1",
+  "short_name": "HENGE",
+  "name": "HENGE custom stylesheet Manager",
+  "description": "Speedy loading of custom CSS",
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "browser_action": {
+    "default_popup": "index.html"
+  }
+}
