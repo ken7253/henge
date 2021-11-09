@@ -1,0 +1,52 @@
+:root {
+  --f-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --f-serif: Georgia, "Times New Roman", Times, serif;
+  --f-monospace: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-feature-settings: "palt";
+  letter-spacing: .05em;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--f-sans-serif);
+}
+h1,h2,h3 {
+  font-weight: 700;
+}
+h4,h5,h6,p {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 1rem;
+}
+h5 {
+  font-size: .875rem;
+}
+h6 {
+  font-size: .75rem;
+}
+
+p {
+  font-family: var(--f-sans-serif);
+  font-size: .875rem;
+}
+
+pre, code, kbd, samp {
+  font-family: var(--f-monospace);
+  font-size: .75rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: .1em;
+}

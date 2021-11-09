@@ -1,34 +1,38 @@
-/*
-  COLOR VARIABLES
-*/
-// dark
-$c-dark: #333;
-$c-darker: #222;
-$c-darkest: #111;
-// light
-$c-light: #eee;
-$c-lighter: #ddd;
-$c-lightest: #ccc;
-// themes
-$c-blue-light: #00aaff;
-$c-blue-lighter: lighten($c-blue-light, 10%);
-$c-blue-lightest: lighten($c-blue-light, 20%);
-$c-blue-dark: darken($c-blue-light, 10%);
-$c-blue-darker: darken($c-blue-light, 20%);
-$c-blue-darkest: darken($c-blue-light, 30%);
+$colorList: (
+  c-blue: #00aaff,
+  c-green: #09b409,
+  c-red: #aa1d1d,
+  c-purple: #933ace,
+  c-yellow: #ffc000,
+);
 
-$c-green-light: #09b409;
-$c-green-lighter: lighten($c-green-light, 10%);
-$c-green-lightest: lighten($c-green-light, 20%);
-$c-green-dark: darken($c-green-light, 10%);
-$c-green-darker: darken($c-green-light, 20%);
-$c-green-darkest: darken($c-green-light, 30%);
+:root {
+  /* color */
+  @each $colorKey, $colorName in $colorList {
+    $dark: darken($colorName, 10%);
+    $darker: darken($colorName, 20%);
+    $darkest: darken($colorName, 30%);
+    $light: lighten($colorName, 10%);
+    $lighter: lighten($colorName, 20%);
+    $lightest: lighten($colorName, 30%);
 
-$c-red-light: #aa1d1d;
+    --#{$colorKey}: #{$colorName};
+    --#{$colorKey}-dark: #{$dark};
+    --#{$colorKey}-darker: #{$darker};
+    --#{$colorKey}-darkest: #{$darkest};
+    --#{$colorKey}-light: #{$light};
+    --#{$colorKey}-lighter: #{$lighter};
+    --#{$colorKey}-lightest: #{$lightest};
+  }
 
-$c-purple-light: #933ace;
+  --c-dark: #333;
+  --c-darker: #222;
+  --c-darkest: #111;
+  --c-light: #ccc;
+  --c-lighter: #ddd;
+  --c-lightest: #eee;
+}
 
 // deprecated colors
 $c-white: #fff;
 $c-black: #000;
-
