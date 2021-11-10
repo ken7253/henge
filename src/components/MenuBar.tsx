@@ -8,7 +8,7 @@ const css: {[key: string]: React.CSSProperties} = {
   }
 }
 
-const MenuBar: React.FC<{visible:any}> = ({visible}) => {
+const MenuBar: React.FC<{visible:() => void}> = ({visible}) => {
   
   return (
     <input type="checkbox" style={css.input} onChange={visible}/>

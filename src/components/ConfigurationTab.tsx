@@ -12,7 +12,7 @@ const css: {[key: string]: React.CSSProperties} = {
   }
 }
 
-const ConfigurationTab: React.FC<{visible: any}> = ({visible}) => {
+const ConfigurationTab: React.FC<{visible: boolean}> = ({visible}) => {
   return (
     <div style={css.tab} hidden={!visible}></div>
   )

@@ -30,7 +30,6 @@ const css: {[key: string]: React.CSSProperties} = {
 const Header: React.FC = () => {
   const [tabVisible, setTabVisible] = useState(false)
   const toggleTab = () => {
-    console.log(`visible:${tabVisible}`)
     setTabVisible(!tabVisible);
   }
   return (
