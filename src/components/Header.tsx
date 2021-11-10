@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import ToggleDarkmode from "./ToggleDarkmode";
 import MenuBar from "./MenuBar";
+import ConfigurationTab from "./ConfigurationTab";
 
 const css: {[key: string]: React.CSSProperties} = {
   header: {
@@ -27,13 +28,19 @@ const css: {[key: string]: React.CSSProperties} = {
 };
 
 const Header: React.FC = () => {
+  const [tabVisible, setTabVisible] = useState(false)
+  const toggleTab = () => {
+    console.log(`visible:${tabVisible}`)
+    setTabVisible(!tabVisible);
+  }
   return (
     <header style={css.header}>
       <h1 style={css.h1}>HENGE</h1>
       <div style={css.controller}>
         <ToggleDarkmode />
-        <MenuBar />
+        <MenuBar visible={toggleTab}/>
       </div>
+      <ConfigurationTab visible={tabVisible} />
     </header>
   );
 };

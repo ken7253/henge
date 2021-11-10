@@ -5,18 +5,16 @@ const css: {[key: string]: React.CSSProperties} = {
     position: 'fixed',
     top: 0,
     left: 0,
-    padding: '55px 0 0 0',
+    padding: '55px 20px 5px 20px',
     width: '100vw',
     height: '100vh',
-    zIndex: 1000,
+    zIndex: -1,
   }
 }
 
-const ConfigurationTab: React.FC = () => {
+const ConfigurationTab: React.FC<{visible: any}> = ({visible}) => {
   return (
-    <div style={css.tab}>
-
-    </div>
+    <div style={css.tab} hidden={!visible}></div>
   )
 }
 
