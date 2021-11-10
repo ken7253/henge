@@ -9,14 +9,14 @@ const css: {[key: string]: React.CSSProperties} = {
 }
 
 const ToggleDarkmode: React.FC = () => {
-  const [theme, setTheme] = useState("light");
-  const [checked, setChecked] = useState(false);
+  const [theme, setTheme] = useState("light dark");
+  const [isDark, setIsDark] = useState(false);
   const handleCheckboxClick = useMemo(() => {
-    setTheme(checked? "light" : "dark")
+    setTheme(isDark? "dark" : "light")
     return () => {
-      setChecked(!checked);
+      setIsDark(!isDark);
     }
-  }, [checked]);
+  }, [isDark]);
 
   useEffect(() => {
     const colorScheme = document.head.querySelector('[name="color-scheme"]') as HTMLMetaElement | null;
@@ -25,7 +25,7 @@ const ToggleDarkmode: React.FC = () => {
     }
   });
 
-  return (<input type="checkbox" style={css.input} checked={checked} onChange={handleCheckboxClick}/>)
+  return (<input type="checkbox" style={css.input} checked={isDark} onChange={handleCheckboxClick}/>)
 }
 
 export default ToggleDarkmode;
