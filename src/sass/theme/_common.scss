@@ -1,0 +1,8 @@
+@use "../base/var";
+
+#root {
+  --c-primary: var(--c-purple);
+  --c-secondary: var(--c-indigo);
+  --c-error: var(--c-red);
+  --c-warning: var(--c-yellow);
+}

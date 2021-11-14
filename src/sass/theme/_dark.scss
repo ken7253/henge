@@ -1,0 +1,7 @@
+@use "../base/var";
+@use "./common";
+
+#root.dark {
+  --c-text: var(--c-lightest);
+  --c-background: var(--c-darker);
+}

@@ -1,0 +1,9 @@
+@use './light';
+@use './dark';
+@use './common';
+
+#root {
+  color: var(--c-text);
+  background-color: var(--c-background);
+  accent-color: var(--c-primary);
+}

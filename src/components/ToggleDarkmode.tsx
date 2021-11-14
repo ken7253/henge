@@ -19,9 +19,12 @@ const ToggleDarkmode: React.FC = () => {
   }, [isDark]);
 
   useEffect(() => {
-    const colorScheme = document.head.querySelector('[name="color-scheme"]') as HTMLMetaElement | null;
-    if (colorScheme?.content) {
+    const colorScheme = document.head.querySelector<HTMLMetaElement>('[name="color-scheme"]');
+    const appRoot = document.getElementById('root');
+    if (colorScheme?.content && appRoot) {
       colorScheme.content = theme;
+      appRoot.classList.remove("dark", "light");
+      appRoot.classList.add(theme);
     }
   });
 

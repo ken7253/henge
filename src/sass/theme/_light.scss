@@ -1,0 +1,7 @@
+@use "../base/var";
+
+
+#root.light {
+  --c-text: var(--c-dark);
+  --c-background: var(--c-light);
+}
