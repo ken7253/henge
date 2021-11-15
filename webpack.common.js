@@ -20,7 +20,7 @@ const common = {
       },
     ],
   },
-  resolve: { extensions: ['.js', '.ts', '.tsx'], modules: ['node_modules'] },
+  resolve: { extensions: ['.js', '.ts', '.tsx', '.json'], modules: ['node_modules'] },
 };
 
 export default common;
