@@ -17,6 +17,7 @@
     "build:sass": "sass src/sass/main.scss dist/main.css",
     "lint:ts": "eslint src",
     "lint:sass": "stylelint src",
+    "update": "ncu -i",
     "prebuild": "cpx \"src/static/**\" dist -C"
   },
   "author": "ken7253 <ken7253@gmail.com> (https://dairoku-studio.com/)",
@@ -36,7 +37,7 @@
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-react": "^7.26.1",
-    "npm-check-updates": "^12.0.0",
+    "npm-check-updates": "^12.0.2",
     "npm-run-all": "^4.1.5",
     "sass": "^1.43.4",
     "stylelint": "^14.0.1",
